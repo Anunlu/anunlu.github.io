@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nasuh/ontologies/2021/11/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/nasuh/ontologies/2021/11/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/nasuh/ontologies/2021/11/untitled-ontology-3#"
+     xmlns:bank-senior-management="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#">
+    <owl:Ontology rdf:about="http://localhost:8890/nasuh/ontologies/2021/11/bank-senior-management"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#DASE_RULE -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#DASE_RULE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#isPermanent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#isPermanent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksFacetoFace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksFacetoFace"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Banking_Operations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Banking_Operations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Banking_Operations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Banking_Operations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Directors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Directors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Directors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Directors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Executive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Executive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Department_of_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Department_of_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksFacetoFace"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#FacetoFace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Female">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Male"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#isPermanent"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Permanent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Government_Agency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Government_Agency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Human_Resources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Human_Resources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Human_Resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Human_Resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Information_System_and_Security_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Information_System_and_Security_Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Information_System_and_Security_Management"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Information_System_and_Security_Management"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Male">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Female"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Person">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Banking_Operations"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Directors"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Executive"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Department_of_Law"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Human_Resources"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Information_System_and_Security_Management"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Strategic_Planning_and_Investor_Relations"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Female"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Male"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Strategic_Planning_and_Investor_Relations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Strategic_Planning_and_Investor_Relations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Bank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#hasTitle"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Strategic_Planning_and_Investor_Relations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Strategic_Planning_and_Investor_Relations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Banking_Operations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Directors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Department_of_Law"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Human_Resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Information_System_and_Security_Management"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksRemote"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Strategic_Planning_and_Investor_Relations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Assistant_General_Manager">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Executive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#FacetoFace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#FacetoFace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Executive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Permanent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Permanent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Executive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#isPermanent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure"/>
+        <bank-senior-management:DASE_RULE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R1___Person(?x) ^ isPermanent(?x,?y) -&gt; Financial_Affairs_and_Treasure(?x)___If a person is permanent the person belongs to Financial_Affairs_and_Treasure.</bank-senior-management:DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#worksFacetoFace"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Department_of_Law"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Department_of_Law"/>
+        <bank-senior-management:DASE_RULE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R2___Person(?x) ^ worksFacetoFace(?x, ?y) -&gt; Department_of_Law(?x)___If a person works face to face the person belongs to Department_of_Law</bank-senior-management:DASE_RULE>
+    </owl:Axiom>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Banking_Operations"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Board_of_Directors"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Department_of_Law"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Financial_Affairs_and_Treasure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Human_Resources"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Information_System_and_Security_Management"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nasuh/ontologies/2021/11/bank-senior-management#Strategic_Planning_and_Investor_Relations"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
