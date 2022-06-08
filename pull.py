@@ -12,93 +12,94 @@ Original file is located at
 import pandas as pd
 import pyrebase
 
-"""<H4>Firebase Config"""
+def pullData():
+    """<H4>Firebase Config"""
 
-config = {
-    "apiKey": "MHiq73lcNJ7G2V2eg8eAmuzLYAqPMg4dVvwUT2Hw",
-    "authDomain": "https://nodemcu-test2-default-rtdb.europe-west1.firebaseapp.com",
-    "databaseURL": "https://nodemcu-test2-default-rtdb.europe-west1.firebasedatabase.app/",
-    "storageBucket": "https://nodemcu-test2-default-rtdb.europe-west1.appspot.com"
-}
+    config = {
+        "apiKey": "MHiq73lcNJ7G2V2eg8eAmuzLYAqPMg4dVvwUT2Hw",
+        "authDomain": "https://nodemcu-test2-default-rtdb.europe-west1.firebaseapp.com",
+        "databaseURL": "https://nodemcu-test2-default-rtdb.europe-west1.firebasedatabase.app/",
+        "storageBucket": "https://nodemcu-test2-default-rtdb.europe-west1.appspot.com"
+    }
 
-"""<h4>Pull Data From Firebase"""
+    """<h4>Pull Data From Firebase"""
 
-firebase = pyrebase.initialize_app(config)
-db = firebase.database()
+    firebase = pyrebase.initialize_app(config)
+    db = firebase.database()
 
-data = db.get()
-val=data.val()
-floors = []
-for i in data.each():
-    floors.append(i.key())
-floorids = []
-wifiData = {}
-for i in floors:
-    floorids.append(val[i].keys())
-for i,j in zip(floors,floorids):
-    wifiData.update({i:val[i][list(j)[0]]})
+    data = db.get()
+    val=data.val()
+    floors = []
+    for i in data.each():
+        floors.append(i.key())
+    floorids = []
+    wifiData = {}
+    for i in floors:
+        floorids.append(val[i].keys())
+    for i,j in zip(floors,floorids):
+        wifiData.update({i:val[i][list(j)[0]]})
 
-"""Convert json data to csv data"""
+    """Convert json data to csv data"""
 
-address = []
-channel = []
-signal = []
-ssid = []
-timestamp = []
-arucoId = []
-quality = []
-measureId = []
-x=[]
-y=[]
-z=[]
+    address = []
+    channel = []
+    signal = []
+    ssid = []
+    timestamp = []
+    arucoId = []
+    quality = []
+    measureId = []
+    x=[]
+    y=[]
+    z=[]
 
-for i in wifiData:
-    for j in range(len(wifiData[i])):
-        for k in wifiData[i][j]:
-            measureId.append(j)
-            address.append(wifiData[i][j][k]['address'])
-            channel.append(wifiData[i][j][k]['channel'])
-            signal.append(wifiData[i][j][k]['signal'])
-            ssid.append(['ssid'])
-            timestamp.append(wifiData[i][j][k]['time'])
-            arucoId.append(wifiData[i][j][k]['id'])
-            quality.append(wifiData[i][j][k]['quality'])
-            x.append(wifiData[i][j][k]['x'])
-            y.append(wifiData[i][j][k]['y'])
-            z.append(wifiData[i][j][k]['z'])
+    for i in wifiData:
+        for j in range(len(wifiData[i])):
+            for k in wifiData[i][j]:
+                measureId.append(j)
+                address.append(wifiData[i][j][k]['address'])
+                channel.append(wifiData[i][j][k]['channel'])
+                signal.append(wifiData[i][j][k]['signal'])
+                ssid.append(['ssid'])
+                timestamp.append(wifiData[i][j][k]['time'])
+                arucoId.append(wifiData[i][j][k]['id'])
+                quality.append(wifiData[i][j][k]['quality'])
+                x.append(wifiData[i][j][k]['x'])
+                y.append(wifiData[i][j][k]['y'])
+                z.append(wifiData[i][j][k]['z'])
 
-df=pd.DataFrame({
-    'address':address,
-    'channel':channel,
-    'signal':signal,
-    'timestamp':timestamp,
-    'arucoId':arucoId,
-    'quality':quality,
-    'x':x,
-    'y':y,
-    'z':z,
-    'measure ID':measureId
-})
+    df=pd.DataFrame({
+        'address':address,
+        'channel':channel,
+        'signal':signal,
+        'timestamp':timestamp,
+        'arucoId':arucoId,
+        'quality':quality,
+        'x':x,
+        'y':y,
+        'z':z,
+        'measure ID':measureId
+    })
 
-len(df)
+    len(df)
 
-df=pd.DataFrame({
-    'address':address,
-    'channel':channel,
-    'signal':signal,
-    'timestamp':timestamp,
-    'arucoId':arucoId,
-    'quality':quality,
-    'x':x,
-    'y':y,
-    'z':z,
-    'measure ID':measureId
-})
+    df=pd.DataFrame({
+        'address':address,
+        'channel':channel,
+        'signal':signal,
+        'timestamp':timestamp,
+        'arucoId':arucoId,
+        'quality':quality,
+        'x':x,
+        'y':y,
+        'z':z,
+        'measure ID':measureId
+    })
 
-"""<h4>Show First 10 Rows"""
+    """<h4>Show First 10 Rows"""
 
-df.head(10)
+    df.head(10)
 
-"""<h4>Save dataframe as raw_data.csv"""
+    """<h4>Save dataframe as raw_data.csv"""
 
-df.to_csv("raw_data.csv")
+    df.to_csv("raw_data.csv")
